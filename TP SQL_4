@@ -1,0 +1,62 @@
+CREATE DATABASE hospital;
+CREATE TABLE paciente(
+  idPaciente INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  fecha_nacimiento DATE NOT NULL
+);
+
+CREATE TABLE doctor(
+  idDoctor INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  especialidad VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE consulta(
+  idConsulta INT AUTO_INCREMENT PRIMARY KEY,
+  fecha DATE NOT NULL,
+  id_doctor INT,
+  id_paciente INT,
+  FOREIGN KEY (id_doctor) REFERENCES doctor(idDoctor) ON DELETE SET NULL,
+  FOREIGN KEY (id_paciente) REFERENCES paciente(idPaciente) ON DELETE SET NULL
+);
+
+
+CREATE TABLE receta(
+  idReceta INT AUTO_INCREMENT PRIMARY KEY,
+  medicamento VARCHAR (50) NOT NULL,
+  dosis INT NOT NULL,
+  id_consulta,
+  FOREIGN KEY (id_consulta) REFERENCES consulta(idConsulta) ON DELETE SET NULL
+);
+
+INSERT INTO paciente(nombre, fecha_nacimiento)
+VALUES
+("Pepita","2008-2-22"),
+("Carlitos","2007-7-23"),
+("Pepita","2010-4-1"),
+("Juancita","2011-3-4"),
+("Juancito","2008-9-12");
+
+INSERT INTO doctor(nombre, especialidad)
+VALUES
+("Juancho","traumatología"),
+("Reffi","pediatría"),
+("Martin","odontología"),
+("Laura","neurología"),
+("Juana","cardiología");
+
+INSERT INTO consulta(fecha, id_doctor, id_paciente)
+VALUES
+("2008-2-22",1,1),
+("2007-7-23",2,3),
+("2010-4-1",5,3),
+("2011-3-4",3,5),
+("2008-9-12",4,2);
+
+INSERT INTO receta(medicamento,dosis,id_consulta)
+VALUES
+("paracetamol",5,1)
+("Antialergico",4,2)
+("Amoxicilina",5,3)
+("Aspirina",20,4)
+("Atenolol",50,5);
