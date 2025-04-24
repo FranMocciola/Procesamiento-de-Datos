@@ -1,4 +1,4 @@
-CREATE DATABASE sistema_ventas
+CREATE DATABASE empresa
 CREATE TABLE cliente(
   idCliente INT AUTO_COMPLETE PRIMARY KEY,
   nombre VARCHAR(100)
