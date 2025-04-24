@@ -27,11 +27,12 @@ VALUES
 ("Pepita");
 INSERT INTO pedido(fecha,id_cliente)
 VALUES
-(2025-2-11,1),
-(2025-2-22,1),
-(2024-12-2,2),
-(2024-10-9,3),
-(2024-5-12,5);
+("2025-2-11",1),
+("2025-2-22",1),
+("2024-12-2",2),
+("2024-10-9",3),
+("2024-5-12",5);
+
 INSERT INTO producto(cantidadSolicitada, precioUnitario,id_pedido)
 VALUES
 (2,50,1),
