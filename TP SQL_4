@@ -55,8 +55,8 @@ VALUES
 
 INSERT INTO receta(medicamento,dosis,id_consulta)
 VALUES
-("paracetamol",5,1)
-("Antialergico",4,2)
-("Amoxicilina",5,3)
-("Aspirina",20,4)
+("paracetamol",5,1),
+("Antialergico",4,2),
+("Amoxicilina",5,3),
+("Aspirina",20,4),
 ("Atenolol",50,5);
