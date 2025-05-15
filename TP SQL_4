@@ -1,18 +1,18 @@
 CREATE DATABASE hospital;
 CREATE TABLE paciente(
-  idPaciente INT AUTO_INCREMENT PRIMARY KEY,
+  idPaciente INTEGER PRIMARY KEY AUTOINCREMENT,
   nombre VARCHAR(100) NOT NULL,
   fecha_nacimiento DATE NOT NULL
 );
 
 CREATE TABLE doctor(
-  idDoctor INT AUTO_INCREMENT PRIMARY KEY,
+  idDoctor INTEGER PRIMARY KEY AUTOINCREMENT,
   nombre VARCHAR(100) NOT NULL,
   especialidad VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE consulta(
-  idConsulta INT AUTO_INCREMENT PRIMARY KEY,
+  idConsulta INTEGER PRIMARY KEY AUTOINCREMENT,
   fecha DATE NOT NULL,
   id_doctor INT,
   id_paciente INT,
@@ -22,7 +22,7 @@ CREATE TABLE consulta(
 
 
 CREATE TABLE receta(
-  idReceta INT AUTO_INCREMENT PRIMARY KEY,
+  idReceta INTEGER PRIMARY KEY AUTOINCREMENT,
   medicamento VARCHAR (50) NOT NULL,
   dosis INT NOT NULL,
   id_consulta,
