@@ -1,17 +1,17 @@
 CREATE DATABASE empresa
 CREATE TABLE cliente(
-  idCliente INT AUTO_INCREMENT PRIMARY KEY,
+  idCliente INTEGER PRIMARY KEY AUTOINCREMENT,
   nombre VARCHAR(100)
 );
 CREATE TABLE pedido(
-  idPedido INT AUTO_INCREMENT PRIMARY KEY,
+  idPedido INTEGER PRIMARY KEY AUTOINCREMENT,
   fecha DATE,
   id_cliente INT,
   FOREIGN KEY (id_cliente) REFERENCES cliente(idCliente) ON DELETE SET NULL
 );
 
 CREATE TABLE producto(
-  idProducto INT AUTO_INCREMENT PRIMARY KEY,
+  idProducto INTEGER PRIMARY KEY AUTOINCREMENT,
   cantidadSolicitada INT,
   precioUnitario INT,
   id_pedido INT,
