@@ -6,13 +6,13 @@ CREATE TABLE estudiante(
 );
 
 CREATE TABLE materia(
-  idMateria INT AUTO_INCREMENT PRIMARY KEY,
+  idMateria INTEGER PRIMARY KEY AUTOINCREMENT,
   nombre VARCHAR(100) NOT NULL,
   añoCorrespondiente INT NOT NULL
 );
 
 CREATE TABLE inscripcion(
-  idInsicripcion INT AUTO_INCREMENT PRIMARY KEY,
+  idInsicripcion INTEGER PRIMARY KEY AUTOINCREMENT,
   fecha DATE NOT NULL,
   id_Estudiante INT,
   id_Materia INT,
