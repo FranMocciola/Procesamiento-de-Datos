@@ -1,6 +1,6 @@
 CREATE DATABASE institucionEducativa;
 CREATE TABLE estudiante(
-  idEstudiante INT AUTO_INCREMENT PRIMARY KEY,
+  idEstudiante INTEGER PRIMARY KEY AUTOINCREMENT,
   nombre VARCHAR(100) NOT NULL,
   fecha_nacimiento DATE NOT NULL
 );
